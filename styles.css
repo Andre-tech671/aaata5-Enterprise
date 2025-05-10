@@ -1,0 +1,549 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set default font and background for the body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Utility classes */
+.container {
+    width: 90%; /* Fluid width */
+    max-width: 1200px; /* Max width for larger screens */
+    margin: 0 auto; /* Center the container */
+    padding: 0 15px; /* Add some padding on the sides */
+}
+
+/* Basic styling for links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Basic button styling */
+button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Navbar Styling */
+
+/* Header Section Styling */
+#header {
+    background: url('./assets/images/background-image.jpg') no-repeat center center/cover; /* Use background property for image */
+    height: 100vh; /* Set a height for the header */
+    display: flex; /* Use flexbox to center content */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    color: #fff; /* Set text color for readability on background */
+    text-align: center;
+    position: relative; /* Needed for potential overlay or content positioning */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header-content {
+    position: relative; /* Ensure content is above the background */
+    z-index: 1; /* Bring content to the front */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background for text readability */
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.header-title-logo {
+    display: flex; /* Arrange title and logo side-by-side */
+    align-items: center; /* Vertically align items */
+    justify-content: center; /* Center the title and logo block */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.display-5 {
+    font-size: 2.5rem; /* Adjust font size as needed */
+    margin-bottom: 10px;
+    margin-right: 10px; /* Space between title and logo */
+    width: auto; /* Remove fixed width */
+    float: none; /* Remove float */
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.aaata5-logo {
+    width: 50px; /* Adjust size for better mobile view */
+    height: auto; /* Maintain aspect ratio */
+    float: none; /* Remove float */
+}
+
+.lead {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    float: none; /* Remove float */
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+  
+}
+/*About*/
+
+/* Add this for text justification and a readable font */
+
+/* Clean up conflicting styles for the container */
+.about-us-container {
+    position: relative; /* Ensure this is set (Bootstrap class helps) */
+    
+     /* padding-bottom is handled by Bootstrap class pb-5 */
+    /* Remove conflicting flex properties if they are here */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+/* Base styles for the paragraph */
+.about-us-text {
+    font-size: 14px; /* Keep or adjust font size */
+    text-align: justify; /* <--- Make the text justified */
+    font-family: 'Open Sans', sans-serif; /* Example readable font */
+    
+
+    /* If you want the paragraph block to be narrower than the column: */
+    max-width: 500px; /* Example reduced max-width */
+     /* Adjust margins for block alignment (left-aligned with auto right margin) */
+    margin-left: 0;
+    margin-right: auto;
+
+    /* Add margin-bottom to create space above the absolute button */
+    margin-bottom: 40px; /* Adjust this value (e.g., 30px, 50px) based on button height + desired gap */
+
+     /* Remove fixed max-height if it was intended to limit content */
+     max-height: none;
+}
+/*About animations*/
+/* Style for the paragraph wrapper box */
+.about-us-text {
+    background-color: #fffbf5; /* Background color for the box */
+    padding: 27px; /* Padding inside the box (adjust as needed) */
+    border-radius: 10px; /* Rounded corners for the box */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle initial shadow */
+
+    /* Add a smooth transition for the hover effects */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for lifting and shadow */
+
+    /* Ensure the box takes available width */
+    width: 100%; /* Takes full width of its container (the column) */
+
+    /* If you want the box itself to be narrower than the column on large screens: */
+    /* max-width: 500px; /* Example reduced max-width (adjust as needed) */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+
+    /* Add space below the box, above the button */
+    margin-bottom: 20px; /* Adjust this value based on button height + desired gap */
+}
+
+/* Style for the paragraph *inside* the wrapper box */
+.about-us-text {
+    font-size: 14px; /* Keep or adjust font size */
+    text-align: justify; /* Justify text */
+    font-family: 'Open Sans', sans-serif; /* Example readable font */
+
+    /* Remove default margins that might interfere */
+    margin-bottom: 0;
+    margin-top: 0;
+
+    /* Remove max-width/auto margins if applied to the box instead */
+    /* max-width: none; */
+    /* margin-left: 0; */
+    /* margin-right: auto; */
+}
+
+/* Hover effect for the paragraph wrapper box - prominent */
+.about-us-text:hover {
+    transform: translateY(-5px); /* Lift the box up by a few pixels */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Enhance the shadow for a stronger lift effect */
+    cursor: pointer; /* Optional: change cursor to pointer on hover */
+
+    /* Optional: Add a subtle border or change background color on hover for extra feedback */
+    /* border: 1px solid #ff6600; */ /* Example: add an accent border */
+    /* background-color: #fff9f0; */ /* Example: slightly change background color */
+}
+
+
+/* Keep the existing styles for the container, image, and button */
+/* .about-us-container { ... } */
+/* .about-image { ... } */
+/* .about-btn { ... } */
+/* Also keep your media queries for responsive adjustments */
+/* @media (min-width: 768px) { ... } */
+/* @media (max-width: 767.98px) { ... } */
+
+/* Adjustments for medium screens and up */
+@media (min-width: 768px) {
+     .about-us-container {
+         /* Ensure sufficient padding at the bottom for the absolute button */
+        padding-bottom: 60px; /* Adjust based on button height + desired gap */
+    }
+     /* If you were right-aligning text on larger screens, remove that rule here */
+     /* .about-us-text { text-align: justify; } */
+}
+
+/* Styles for small screens */
+@media (max-width: 767.98px) {
+     .about-us-text {
+        /* Keep text-align: justify; from base rule */
+        /* If max-width was applied globally, ensure it takes full width on small screens */
+        max-width: 100%;
+        margin-left: auto; /* Center block on small screens if max-width applied globally */
+        margin-right: auto; /* Center block on small screens if max-width applied globally */
+        margin-bottom: 40px; /* Need bottom margin on small screens too */
+    }
+    .about-us-container {
+         /* Ensure sufficient padding at the bottom for the absolute button on small screens */
+        padding-bottom: 60px; /* Adjust for small screens too */
+    }
+}
+
+/* Style for the image border radius */
+.about-image {
+    border-radius: 10px; /* Adjust the pixel value for more or less rounding */
+}
+
+/* Style for the button itself (from previous step) */
+/* Make outline secondary buttons turn orange on hover */
+#about .about-btn:hover {
+    background-color: orange;
+    border-color: orange;
+    color: white;
+}
+/* Style for the image border radius (from previous step) */
+.about-image {
+    border-radius: 10px; /* Adjust the pixel value for more or less rounding */
+}
+
+
+/* Add this for slightly rounded image corners */
+.about-image {
+    border-radius: 10px; /* Adjust the pixel value for more or less rounding */
+}
+
+
+/* Keep the existing styles for the Flexbox layout on the column if you had custom ones */
+/* .col-md-6.d-flex.flex-column {} */
+
+/*Products*/
+/*.features-container{
+    background-color:#ed8762;
+}*/
+#products{
+    background-color:#ed8762;
+}
+.feature-1-content{
+    background-color:#fffbf5;
+    padding:27px;
+    font-size:15px;
+    align-content: justify;
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
+}
+.feature-p-1{
+    text-align: justify;
+}
+.feature-2-content{
+    background-color:#fffbf5;
+    padding:20px;
+    font-size:15px;
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
+}
+.feature-p-2{
+    text-align: justify;
+}
+.feature-3-content{
+    background-color:#fffbf5;
+    padding:27px;
+    font-size:15px;
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
+}
+.feature-p-3{
+    text-align: justify;
+}/* Style for each feature content box */
+.feature-content-box {
+    background-color: #fffbf5; /* Your background color */
+    padding: 27px; /* Consistent padding for all */
+    font-size: 15px; /* Consistent font size for the box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle initial shadow */
+
+    /* Ensure the box takes available width and stacks vertically if needed */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    /* Add a smooth transition for the hover effects */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for lifting and shadow */
+
+    /* align-content: justify; /* This is not a valid CSS property - removed */
+}
+
+/* Style for paragraphs within the feature content boxes */
+.feature-content-box p {
+    text-align: justify; /* Justify text in all feature paragraphs */
+    margin-bottom: 0; /* Remove default paragraph bottom margin if spacing is handled differently */
+}
+
+/* Hover effect for the feature content box - more prominent */
+.feature-content-box:hover {
+    transform: translateY(-5px); /* Lift the box up by 5 pixels */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Enhance the shadow for a stronger lift effect */
+
+    /* Optional: Add a subtle border or change background color on hover for extra feedback */
+    /* border: 1px solid #ff6600; */ /* Example: add an orange border */
+    /* background-color: #fff9f0; */ /* Example: slightly change background color */
+}
+
+
+/*
+   Remove the old individual styles for feature content and paragraphs,
+   as they are now covered by .feature-content-box and .feature-content-box p
+*/
+/* .feature-1-content, .feature-2-content, .feature-3-content { ... } */
+/* .feature-p-1, .feature-p-2, .feature-p-3 { ... } */
+
+
+/* Keep the .feature-item hover if you want a subtle dimming *on the column* too */
+/* .feature-item:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* Example: 5% black opacity */
+/* } */
+
+/* Content Sections Styling */
+.content-section {
+    padding: 40px 0; /* Add padding to sections */
+}
+
+.content-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.content-section p {
+    margin-bottom: 15px;
+}
+
+/* event section */
+#events{
+    background-color: #fffbf5;
+}
+/* Set a specific height for the card top images */
+.card-img-top {
+    height: 300px; /* Or the desired consistent height */
+    object-fit: cover; /* Ensures the image covers the area without being distorted */
+    width: 100%; /* Ensures it takes the full width of its container */
+}
+/* Add transition to the base image style */
+.card-img-top {
+    height: 300px; /* Keep the height and object-fit from step 1 */
+    object-fit: cover;
+    width: 100%;
+
+    /* Add a smooth transition for transform and opacity changes */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+/* Define the hover effect */
+.card-img-top:hover {
+    transform: scale(1.05); /* Slightly zoom in the image (scales up by 5%) */
+    opacity: 0.9; /* Slightly dim the image (reduces opacity by 10%) */
+}
+.card-text{
+text-align: justify;
+}
+
+/*Location*/
+
+/* Style for the map container wrapper */
+.map-container-wrapper {
+    overflow: hidden; /* Ensure content outside max-height is hidden */
+    max-height: 30vh; /* Limit the maximum height of the visible map area */
+
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle initial shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add a smooth transition for hover effects */
+    cursor: pointer; /* Optional: Change cursor to pointer on hover */
+}
+
+/* Hover effect for the map container wrapper */
+.map-container-wrapper:hover {
+    transform: translateY(-5px); /* Lift the container up by a few pixels */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Enhance the shadow for a stronger effect */
+
+    /* Optional: Add a subtle border or change background on hover */
+    /* border: 1px solid #007bff; */
+    /* background-color: rgba(0, 123, 255, 0.05); */ /* Subtle blue overlay */
+}
+
+/*
+   If you are using the fully responsive map embed method with a wrapper around the iframe,
+   ensure that wrapper and the iframe inside it are styled correctly for responsiveness:
+   .map-responsive { overflow: hidden; padding-bottom: 56.25%; position: relative; height: 0; }
+   .map-responsive iframe { left: 0; top: 0; height: 100%; width: 100%; position: absolute; }
+
+   If you are NOT using the responsive wrapper, the iframe's width: 100% and fixed height will determine its size within the max-height wrapper.
+*/
+
+
+/* Style for the store info paragraph wrapper box */
+.store-info-box {
+    background-color: #fffbf5; /* Background color for the box (same as feature boxes) */
+    padding: 27px; /* Padding inside the box (adjust as needed for this content) */
+    border-radius: 10px; /* Rounded corners for the box */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle initial shadow */
+
+    /* Add a smooth transition for the hover effects */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for lifting and shadow */
+    cursor: pointer; /* Optional: Change cursor to pointer on hover */
+
+    /* Add margin below the box to separate it from the map */
+    /* Remove Bootstrap's mb-4 from the paragraph if adding mb here */
+    margin-bottom: 30px; /* Adjust as needed to control space above the map */
+
+    /* Ensure the box takes available width within its container column */
+    width: 100%; /* This should work within col-lg-6 mx-auto */
+}
+
+/* Adjust margins for the paragraph *inside* the wrapper box */
+.store-info-box p {
+    /* Remove Bootstrap margin-bottom from the paragraph itself */
+    margin-bottom: 0 !important; /* Use !important to override Bootstrap's mb-4 */
+    margin-top: 0; /* Remove default paragraph top margin */
+    /* Keep other paragraph styles like font-size, text-align, font-family */
+}
+
+
+/* Hover effect for the store info paragraph wrapper box - prominent */
+.store-info-box:hover {
+    transform: translateY(-5px); /* Lift the box up by a few pixels */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Enhance the shadow for a stronger lift effect */
+
+    /* Optional: Add a subtle border or change background color on hover */
+    /* border: 1px solid #ff6600; */
+    /* background-color: #fff9f0; */
+}
+
+/* Keep the CSS for the map container wrapper and its hover effect */
+/* .map-container-wrapper { ... } */
+/* .map-container-wrapper:hover { ... } */
+
+/* Keep other relevant styles for the section */
+/* .px-4.pt-5.my-5.text-center.border-bottom { ... } */
+/* .col-lg-6.mx-auto { ... } */
+/* Also keep your responsive map iframe styles if using the wrapper method */
+/* .map-responsive iframe { ... } */
+/* --- Responsive Map Embed CSS --- */
+
+/* This container creates the aspect ratio */
+.map-responsive {
+    overflow: hidden; /* Hide anything that goes outside */
+    /* Set the aspect ratio (e.g., 16:9) */
+    /* Calculate: (desired height / desired width) * 100% */
+    /* Common values: 56.25% for 16:9, 75% for 4:3 */
+    padding-bottom: 56.25%; /* Example: 16:9 aspect ratio */
+    position: relative; /* Needed for absolute positioning of the iframe */
+    height: 0; /* Necessary for the padding-bottom trick to control height */
+}
+
+/* Style the iframe to fill the responsive container */
+.map-responsive iframe {
+    left: 0; /* Position from the left edge of the parent */
+    top: 0; /* Position from the top edge of the parent */
+    height: 100%; /* Make iframe fill the height of the parent (.map-responsive) */
+    width: 100%; /* Make iframe fill the width of the parent (.map-responsive) */
+    position: absolute; /* Position absolutely within the relative parent */
+}
+
+/* --- Keep your other styles for the map container wrapper --- */
+.map-container-wrapper {
+    overflow: hidden; /* Keep this */
+    max-height: 30vh; /* Keep this - it limits the *visible* height of the responsive map */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Keep your hover effect for the map container wrapper */
+/* .map-container-wrapper:hover { ... } */
+
+/* Keep other relevant styles for the section */
+/* ... */
+
+/* Frequently Asked Questions (FAQ) Section */
+/* Base styles for the accordion button arrow (for smaller screens) */
+/* Target the pseudo-element that creates the arrow */
+.accordion-button::after {
+    /* Bootstrap uses a background image (SVG) for the arrow by default. */
+    /* We can control its size by adjusting background-size or width/height. */
+
+    /* Option 1: Adjust background-size (often works well with Bootstrap's SVG) */
+    /* background-size: 1.25rem; /* Base size for small screens (adjust as needed) */
+
+    /* Option 2: Adjust width and height (if background-size isn't sufficient) */
+    /* Make sure to also adjust margin if changing size significantly */
+    width: 1.25rem; /* Base width for small screens (adjust as needed) */
+    height: 1.25rem; /* Base height for small screens (adjust as needed) */
+    margin-left: 0.5rem; /* Adjust margin if needed */
+
+    /* Keep Bootstrap's transition for smooth rotation */
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Responsive adjustments for the accordion button arrow on larger screens */
+/* Use a media query to apply different styles above a certain breakpoint (e.g., md or lg) */
+@media (min-width: 768px) { /* Apply styles on medium screens and larger */
+    .accordion-button::after {
+        /* Option 1: Adjust background-size for larger screens */
+        /* background-size: 1.5rem; /* Larger size for desktop (adjust as needed) */
+
+        /* Option 2: Adjust width and height for larger screens */
+        width: 1.5rem; /* Larger width for desktop (adjust as needed) */
+        height: 1.5rem; /* Larger height for desktop (adjust as needed) */
+        margin-left: 0.75rem; /* Adjust margin if needed */
+    }
+}
+
+/* You can add more media queries for other breakpoints (lg, xl, xxl) if needed */
+/* @media (min-width: 992px) { /* Apply styles on large screens and larger */
+/* .accordion-button::after { */
+/* width: 1.75rem; /* Even larger size for very large screens */
+/* height: 1.75rem; */
+/* } */
+/* } */
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
